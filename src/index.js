@@ -1,7 +1,12 @@
 import dotenv from 'dotenv';
-dotenv.config();
 import app from './app.js';
 import Routes from './modules/routes.js';
+import Database from './Database.js';
+
+dotenv.config();
+
+const db = new Database();
+db.connect();
 
 //const mongoose = require('mongoose');
 const routes = new Routes();
